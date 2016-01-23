@@ -1,5 +1,5 @@
 //
-//  MultipleExpectsInIt.swift
+//  MultipleExpectsInItABReversed.swift
 //  WeirdTestNavigatorDemo
 //
 //  Created by Cihat Gündüz on 23.01.16.
@@ -12,19 +12,19 @@ import Quick
 import Nimble
 
 
-class MultipleExpectsInIt: QuickSpec {
-
+class MultipleExpectsInItABReversed: QuickSpec {
+    
     override func spec() {
         
-        describe("A") {
-            it("fails a") {
+        describe("B") {
+            it("fails b") {
                 expect(true).to(beFalse())
                 expect(true).to(beTrue())
                 expect(true).to(beFalse())
                 expect(true).to(beTrue())
                 expect(true).to(beFalse())
             }
-            it("fails b") {
+            it("fails a") {
                 expect(true).to(beFalse())
                 expect(true).to(beTrue())
                 expect(true).to(beFalse())
@@ -33,15 +33,15 @@ class MultipleExpectsInIt: QuickSpec {
             }
         }
         
-        describe("B") {
-            it("fails a") {
+        describe("A") {
+            it("fails b") {
                 expect(true).to(beFalse())
                 expect(true).to(beTrue())
                 expect(true).to(beFalse())
                 expect(true).to(beTrue())
                 expect(true).to(beFalse())
             }
-            it("fails b") {
+            it("fails a") {
                 expect(true).to(beFalse())
                 expect(true).to(beTrue())
                 expect(true).to(beFalse())
@@ -50,5 +50,5 @@ class MultipleExpectsInIt: QuickSpec {
             }
         }
     }
-
+    
 }
