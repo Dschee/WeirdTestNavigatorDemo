@@ -12,6 +12,7 @@
 		82B52ED61C540F4B00219DD4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52ED41C540F4900219DD4 /* Quick.framework */; };
 		82B52ED71C540F4E00219DD4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52ED21C540F3900219DD4 /* Nimble.framework */; };
 		82B52EDA1C540FCE00219DD4 /* DescribeItExpectCombined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B52ED91C540FCE00219DD4 /* DescribeItExpectCombined.swift */; };
+		82B52EDC1C54123100219DD4 /* MultipleItInDescribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B52EDB1C54123100219DD4 /* MultipleItInDescribe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		82B52ED21C540F3900219DD4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		82B52ED41C540F4900219DD4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		82B52ED91C540FCE00219DD4 /* DescribeItExpectCombined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescribeItExpectCombined.swift; sourceTree = "<group>"; };
+		82B52EDB1C54123100219DD4 /* MultipleItInDescribe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleItInDescribe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				82B52ED91C540FCE00219DD4 /* DescribeItExpectCombined.swift */,
+				82B52EDB1C54123100219DD4 /* MultipleItInDescribe.swift */,
 				82B52EC91C540D7800219DD4 /* Info.plist */,
 			);
 			path = WeirdTestNavigatorDemoTests;
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82B52EDC1C54123100219DD4 /* MultipleItInDescribe.swift in Sources */,
 				82B52EDA1C540FCE00219DD4 /* DescribeItExpectCombined.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
