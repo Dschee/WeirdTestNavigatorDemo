@@ -26,6 +26,7 @@ class DescribeItExpectCombined: QuickSpec {
                 expect(true).to(beFalse())
             }
         }
+        
     }
     
 }
