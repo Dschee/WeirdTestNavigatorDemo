@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		82B52EBC1C540D7800219DD4 /* WeirdTestNavigatorDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = 82B52EBB1C540D7800219DD4 /* WeirdTestNavigatorDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82B52EC31C540D7800219DD4 /* WeirdTestNavigatorDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52EB81C540D7800219DD4 /* WeirdTestNavigatorDemo.framework */; };
-		82B52EC81C540D7800219DD4 /* WeirdTestNavigatorDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B52EC71C540D7800219DD4 /* WeirdTestNavigatorDemoTests.swift */; };
+		82B52ED61C540F4B00219DD4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52ED41C540F4900219DD4 /* Quick.framework */; };
+		82B52ED71C540F4E00219DD4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52ED21C540F3900219DD4 /* Nimble.framework */; };
+		82B52EDA1C540FCE00219DD4 /* DescribeItExpectCombined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B52ED91C540FCE00219DD4 /* DescribeItExpectCombined.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +29,10 @@
 		82B52EBB1C540D7800219DD4 /* WeirdTestNavigatorDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeirdTestNavigatorDemo.h; sourceTree = "<group>"; };
 		82B52EBD1C540D7800219DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82B52EC21C540D7800219DD4 /* WeirdTestNavigatorDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeirdTestNavigatorDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		82B52EC71C540D7800219DD4 /* WeirdTestNavigatorDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeirdTestNavigatorDemoTests.swift; sourceTree = "<group>"; };
 		82B52EC91C540D7800219DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82B52ED21C540F3900219DD4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		82B52ED41C540F4900219DD4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		82B52ED91C540FCE00219DD4 /* DescribeItExpectCombined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescribeItExpectCombined.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82B52ED71C540F4E00219DD4 /* Nimble.framework in Frameworks */,
+				82B52ED61C540F4B00219DD4 /* Quick.framework in Frameworks */,
 				82B52EC31C540D7800219DD4 /* WeirdTestNavigatorDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +62,8 @@
 				82B52EBA1C540D7800219DD4 /* WeirdTestNavigatorDemo */,
 				82B52EC61C540D7800219DD4 /* WeirdTestNavigatorDemoTests */,
 				82B52EB91C540D7800219DD4 /* Products */,
+				82B52ED41C540F4900219DD4 /* Quick.framework */,
+				82B52ED21C540F3900219DD4 /* Nimble.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,7 +88,7 @@
 		82B52EC61C540D7800219DD4 /* WeirdTestNavigatorDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				82B52EC71C540D7800219DD4 /* WeirdTestNavigatorDemoTests.swift */,
+				82B52ED91C540FCE00219DD4 /* DescribeItExpectCombined.swift */,
 				82B52EC91C540D7800219DD4 /* Info.plist */,
 			);
 			path = WeirdTestNavigatorDemoTests;
@@ -125,6 +133,7 @@
 				82B52EBE1C540D7800219DD4 /* Sources */,
 				82B52EBF1C540D7800219DD4 /* Frameworks */,
 				82B52EC01C540D7800219DD4 /* Resources */,
+				82B52ED81C540F5D00219DD4 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,6 +198,25 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		82B52ED81C540F5D00219DD4 /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		82B52EB31C540D7800219DD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -201,7 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82B52EC81C540D7800219DD4 /* WeirdTestNavigatorDemoTests.swift in Sources */,
+				82B52EDA1C540FCE00219DD4 /* DescribeItExpectCombined.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +340,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WeirdTestNavigatorDemo/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -328,6 +360,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WeirdTestNavigatorDemo/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -340,16 +376,27 @@
 		82B52ED01C540D7800219DD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WeirdTestNavigatorDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = source.open.WeirdTestNavigatorDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		82B52ED11C540D7800219DD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WeirdTestNavigatorDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = source.open.WeirdTestNavigatorDemoTests;
@@ -376,6 +423,7 @@
 				82B52ECE1C540D7800219DD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82B52ECF1C540D7800219DD4 /* Build configuration list for PBXNativeTarget "WeirdTestNavigatorDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +432,7 @@
 				82B52ED11C540D7800219DD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
